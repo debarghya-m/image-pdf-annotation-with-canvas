@@ -1,0 +1,59 @@
+#canvasWrapper {
+    border: 1px solid #5F44CE;
+    width: 600px;
+    height: 600px;
+    overflow: auto;
+    position: relative;
+  }
+  
+  #canvasContainer {
+    position: relative;
+    transform-origin: top left;
+  }
+  
+  .marker {
+    width: 15px;
+    height: 15px;
+    background: #5F44CE;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+
+    .tooltip {
+        position: absolute;
+        background: #5F44CE;
+        color: white;
+        padding: 7px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: none;
+        z-index: 10;
+    }
+
+    .list {
+        margin-top: 20px;
+    }
+
+    .list-item {
+        padding: 8px;
+        margin: 4px 0;
+        background-color: #5F44CE1A;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .list-item:hover {
+        background-color: #5F44CE3A;
+    }
+
+    #saveBtn {
+        padding: 8px 12px;
+        margin-top: 12px;
+        cursor: pointer;
+        background: #5F44CE;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }

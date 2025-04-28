@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Comment on Image</title>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+    <div style="display: flex; gap: 24px; align-items: start; ">
+        <div style="display: flex; flex-direction: column; gap: 24px; padding: 24px; width: 70%; border: 1px solid #5F44CE;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <input type="file" id="imageUpload" accept="image/*,.pdf" />
+                <button id="saveBtn">Save Data</button>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button id="zoomInBtn">Zoom In</button>
+                <button id="zoomOutBtn">Zoom Out</button>
+            </div>
+            <div id="canvasWrapper" style="position: relative; width: 600px; height: 600px; overflow: auto;">
+                <div id="canvasContainer" style="position: relative; transform-origin: top left;">
+                  <canvas id="imageCanvas"></canvas>
+                </div>
+                <div id="markersLayer" style="position: absolute; top: 0; left: 0; pointer-events: none;"></div>
+                <div id="tooltip" class="tooltip"></div>
+            </div>
+            <!-- <div id="canvasWrapper" style="position: relative; width: 600px;">
+                <canvas id="imageCanvas"></canvas>
+                <div id="tooltip" class="tooltip"></div>
+            </div> -->
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; border: 1px solid #5F44CE; padding: 24px; width: 30%;">
+            <h3>Saved Images</h3>
+            <div class="list" id="imageList"></div>
+        </div>
+    </div>
+
+    <script src="canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+    </body>
+</html>
